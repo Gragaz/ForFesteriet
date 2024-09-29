@@ -1,0 +1,110 @@
+<!-- Random bajs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Förfesteriet</title>
+    <link rel="stylesheet" href="stylePP.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!--NAVBAR-->
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="Img/Förfesterietlogo.png" alt=""></a>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html">Hem</a></li>
+                        <li><a href="Medlemmar.html">Medlemmar</a></li>
+                        <li><a href="Galleri.html">Galleri</a></li>
+                        <li><a href="Festkalender.html">Festkalender</a></li>
+                        <li><a href="Supa.html">Supa</a></li>
+                        <li><a href="PartyPlaylist.html">Party Playlist</a></li>
+                        <li><a href="Kontakt.html">Kontakt</a></li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+
+    <!-- Spotify spellista och förslag-->
+    <h2>Våra Spotify-spellistor</h2>
+
+<div class="spotify-container">
+    <div class="spotify-embed">
+        <h3>FörFest</h3>
+        <iframe src="https://open.spotify.com/embed/playlist/5sRJdlZqQvIrsBx5Rm5NBL?si=a77b4b4fc3614ed5" allowtransparency="true" allow="encrypted-media"></iframe>
+    </div>
+
+    <div class="spotify-embed">
+        <h3>Gähda</h3>
+        <iframe src="https://open.spotify.com/embed/playlist/6CQDLaWkfZv0vEDtTFObEr?si=263e729e985741d6" allowtransparency="true" allow="encrypted-media"></iframe>
+    </div>
+</div>
+
+<h2>Föreslå en låt till någon av spellistorna</h2>
+<form action="https://formsubmit.co/55c50300399b95f535a42eff466743e1" method="POST">
+    
+    <label for="song">Låtnamn:</label>
+    <input type="text" id="song" name="song" placeholder="Skriv in låtnamn" required>
+
+    <label for="artist">Artist:</label>
+    <input type="text" id="artist" name="artist" placeholder="Skriv in artistens namn" required>
+
+    <label for="comment">Kommentar (valfritt):</label>
+    <textarea id="comment" name="comment" rows="4" placeholder="Eventuella kommentarer"></textarea>
+
+    <input type="hidden" name="_next" value="http://127.0.0.1:5500/Tack2.html">
+    <input type="hidden" name="_subject" value="Förfesteriet spellista">
+    <input type="hidden" name="_captcha" value="false">
+
+    <button type="submit">Skicka förslag</button>
+</form>
+
+
+    <!--FOOTER-->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>FörFesteriet</h4>
+                    <img src="Img/Förfesterietlogo.png" alt="" class="footer-image">
+                    <p>Festen Innan Festen</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Bläddra</h4>
+                    <ul>
+                        <li><a href="index.html">Hem</a></li>
+                        <li><a href="Medlemmar.html">Medlemmar</a></li>
+                        <li><a href="Galleri.html">Galleri</a></li>
+                        <li><a href="Festkalender.html">Festkalender</a></li>
+                        <li><a href="Supa.html">Supa</a></li>
+                        <li><a href="PartyPlaylist.html">Party Playlist</a></li>
+                        <li><a href="Kontakt.html">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Kontakt</h4>
+                    <div class="kontakt">
+                        <div class="kontakt-item">
+                            <span><i class="fa fa-map-pin"></i></span>
+                            <span class="kontakt-text">Rydsvägen 258C</span>
+                        </div>
+                        <div class="kontakt-item">
+                            <span><i class="fa fa-inbox"></i></span>
+                            <span class="kontakt-text">Dinmamma@hemmahosmig.se</span>
+                        </div>
+                        <div class="kontakt-item">
+                            <span><i class="fa fa-phone"></i></span>
+                            <span class="kontakt-text">+4693139687</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p><i class="fa fa-copyright"></i> Copyright 2024 | Made with <i class="far fa-heart"></i> by Gragaz</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

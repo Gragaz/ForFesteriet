@@ -1,0 +1,275 @@
+/* Väljer hela sidan och noll-sätter den. Smooth scroll och font. */
+*{
+    margin: 0;
+    padding:0;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* CSS för alla nav element. Sätter padding, displayen till flex, Lägger content över hela displayen(space-between) och sen alignar det "center" */
+nav{
+    display: flex;
+    padding: 0.5% 6%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(25, 26, 74, 1);
+}
+
+/* Logo CSS */
+.header img{
+    width: 200px;
+}
+
+/* Text align självförklarligt */
+.nav-links{
+    text-align: right;
+}
+
+/* list-style tar bort punktform, inline block sätter länkarna sidles */
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 25px;
+}
+
+/* Sätter färg på länkarna i navbar och tar bort det blå standard länk grejen */
+.nav-links ul li a{
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 22px;
+}
+
+/* Hover effect med streck under länkarna i navbar */
+.nav-links ul li::after{
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: blue;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+
+
+
+
+
+/* CSS för img under navbar. vet inte vad display lbock och object fit contain gör */
+.FrontPageimg img{
+    width: 100%;
+    display: block;
+    object-fit: contain;
+}
+
+
+
+
+
+/* Section för text CSS */
+.text-section {
+    padding: 220px 0;
+    background-color: rgba(25, 26, 74, 1);
+}
+
+/* Div för container med rubrik och text. Centrerar och gap mellan */
+.text-container {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* CSS för enstaka divsen. Alltså inte båda i ett som den ovan */
+.text-item {
+    flex: 1;
+    max-width: 45%; /* Adjust width of text blocks */
+    text-align: left; /* Align text to the left */
+}
+
+/* CSS för rubrikerna */
+.text-item h2 {
+    font-size: 24px; 
+    margin-bottom: 10px;
+    color: whitesmoke;
+}
+
+/* CSS för divs för text box */
+.text-item p {
+    font-size: 16px; /* Paragraph size */
+    line-height: 1.6; /* Improve readability with more line spacing */
+    color: whitesmoke;
+}
+
+
+
+
+
+
+/* MEDIA SEKTION */
+
+/* Section CSS */
+.media-section {
+    background-color: white;
+    padding: 195px;
+}
+
+/* Divven i section där median kommer vara. Centrerar och lägger liten gap mellan dom */
+.media-container {
+    display: flex;
+    justify-content: center;
+    gap: 160px; /* Adjust the space between items */
+    max-width: 1200px; /* Optional: limit max width */
+    margin: 0 auto;
+}
+
+/* CSS för div med bild och text */
+.media-item {
+    flex: 1;
+    max-width: 45%; /* Adjust the width of each item */
+}
+
+/* CSS för bara bild */
+.media-item img,
+.media-item video {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Optional: add border-radius for rounded corners */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.9); /* Stronger shadow */
+}
+
+
+
+
+
+
+
+
+
+/* FOOTER */
+
+/* CSS för diven med allt i footer basically */
+.container{
+    max-width: 1800px;
+    margin: auto;
+}
+
+/* Lägger alla 3 rubriker sida mot sida */
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Tar bort punktform */
+ul{
+    list-style: none;
+}
+
+/* Lägger padding from toppen av div fottern till faktista texten */
+.footer{
+    padding: 70px 0px;
+    background-color: black;
+}
+
+/* Sprider ut de 3 rubrikers jämnt */
+.footer-col{
+    width: 25%;
+    padding: 0 15px;
+    color: whitesmoke;
+}
+
+/* Rubrikerna i footer, font size, färg, margin mellan rubrik och text under, text tjocklek och position relative förstår inte */
+.footer-col h4{
+    font-size: 18px;
+    color: whitesmoke;
+    margin-bottom: 30px;
+    font-weight: 500;
+    position: relative;
+}
+
+/* content skapar en linje, vet inte, vet inte, färg, tjocklek, fattar inte, bredd */
+.footer-col h4::before{
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    background-color: blue;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+/* Storlek mellan varje rad i fotter när dom ligger listade på varandra */
+.footer-col ul li:not(:last-child){
+    margin-bottom: 18px;
+}
+
+/* CSS för varje rad av text i "Bläddra". font size, färg, text-decoration tar bort undertext, tjocklek, färg och hover övergång hastighet  */
+.footer-col ul li a{
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+    color: grey;
+    transition: all 0.3s ease;
+}
+
+/* Vad som händer när man hover över texten, flyttas lite åt höger och ändrar färg */
+.footer-col ul li a:hover{
+    color: white;
+    padding-left: 8px;
+}
+
+/* Staplar varje kontakt under varandra horizontellt. CSS för hela diven under rubriken */
+.footer-col .kontakt {
+    display: flex;
+    flex-direction: column;
+}
+
+/* CSS för varje column i kontakt. */
+.footer-col .kontakt-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* helt ärligt fattar ingenting. Men CSS för varje icon grej */
+.footer-col .kontakt-item span:first-child {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: blue;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 70%;
+    color: white;
+    margin-right: 10px;
+}
+
+/* CSS för texten bredvid ikonerna */
+.footer-col .kontakt-item .kontakt-text {
+    font-size: 16px;
+    color: white;
+}
+
+/* CSS för img under Förfesteriet i footer */
+.footer-col .footer-image {
+    max-width: 200px; /* Gör bilden max 100px bred */
+    height: auto; /* Bibehåller bildens proportioner */
+    margin-top: 10px; /* Skapa lite utrymme mellan rubrik och bild */
+    margin-bottom: 25px; /* Utrymme under bilden */
+
+}
+
+/* CSS för text längst ner på sidan av footer */ 
+.footer-bottom {
+    text-align: center; /* Centrerar texten inom .footer-bottom */
+    padding-top: 60px; /* Lägg till lite utrymme ovanför och nedanför texten */
+    color: white; /* Textfärg (ändra vid behov) */
+}
+
+
