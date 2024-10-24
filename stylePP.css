@@ -60,13 +60,13 @@ nav{
 body {
     background-color: #f4f4f4;
     color: #333;
-    text-align: center;
 }
 
 /* Rubrikerna */
 h2, h3 {
     font-size: 2em;
     padding: 60px;
+    text-align: center;
 }
 
 /* CSS för hela sidan */
