@@ -12,7 +12,7 @@ nav{
     padding: 0.5% 6%;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(25, 26, 74, 1);
+    background-color: black;
 }
 
 /* Logo CSS */
@@ -58,90 +58,80 @@ nav{
 
 
 
-/* CSS för img under navbar. vet inte vad display lbock och object fit contain gör */
-.FrontPageimg img{
-    width: 100%;
-    display: block;
-    object-fit: contain;
+
+/* CSS MEDLEMMAR */
+
+/* CSS för hela sektionen inclusive centrera rubriken */
+.members {
+    padding: 20px;
+    text-align: center;
+    background-color: #f4f4f4;
 }
 
-
-
-
-
-/* Section för text CSS */
-.text-section {
-    padding: 220px 0;
-    background-color: rgba(25, 26, 74, 1);
+/* Rubriken */
+.members h2 {
+    padding: 40px;
+    font-size: 2em;
+    color: black;
 }
 
-/* Div för container med rubrik och text. Centrerar och gap mellan */
-.text-container {
+/* CSS för alla bilder */
+.members-container {
+    display: grid;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* CSS för självsåtende bilden */
+.Jimmy {
+    margin-bottom: 20px; /* Avstånd under den ensamma bilden */
+    padding-bottom: 40px;
+    font-weight: bold;
+    color: black;
+}
+
+/* CSS för första bilden under rubriken */
+.Jimmy img {
+    max-width: 100%;
+    max-height: 100%;
+    width: 20vw;
+    height: 65vh;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* CSS för raden under jimmy bilden */
+.members-row {
     display: flex;
     justify-content: center;
-    gap: 100px;
-    max-width: 1200px;
-    margin: 0 auto;
+    margin-bottom: 140px; /* Avstånd mellan raderna */
 }
 
-/* CSS för enstaka divsen. Alltså inte båda i ett som den ovan */
-.text-item {
-    flex: 1;
-    max-width: 45%; /* Adjust width of text blocks */
-    text-align: left; /* Align text to the left */
+/* Avstånd mellan bilderna */
+.member {
+    margin: 0 70px; 
+    
 }
 
-/* CSS för rubrikerna */
-.text-item h2 {
-    font-size: 24px; 
-    margin-bottom: 10px;
-    color: whitesmoke;
+/* CSS för varje bild */
+.member img {
+    max-width: 100%;
+    max-height: 100%;
+    width: 20vw;
+    height: 65vh;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* CSS för divs för text box */
-.text-item p {
-    font-size: 16px; /* Paragraph size */
-    line-height: 1.6; /* Improve readability with more line spacing */
-    color: whitesmoke;
+/* CSS för texten under de 6 bilderna */
+.member p {
+    margin-top: 10px;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: black;
 }
-
-
-
-
-
-
-/* MEDIA SEKTION */
-
-/* Section CSS */
-.media-section {
-    background-color: white;
-    padding: 195px;
-}
-
-/* Divven i section där median kommer vara. Centrerar och lägger liten gap mellan dom */
-.media-container {
-    display: flex;
-    justify-content: center;
-    gap: 160px; /* Adjust the space between items */
-    max-width: 1200px; /* Optional: limit max width */
-    margin: 0 auto;
-}
-
-/* CSS för div med bild och text */
-.media-item {
-    flex: 1;
-    max-width: 45%; /* Adjust the width of each item */
-}
-
-/* CSS för bara bild */
-.media-item img,
-.media-item video {
-    width: 100%;
-    height: auto;
-    border-radius: 8px; /* Optional: add border-radius for rounded corners */
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.9); /* Stronger shadow */
-}
-
 
 
 
@@ -271,5 +261,4 @@ ul{
     padding-top: 60px; /* Lägg till lite utrymme ovanför och nedanför texten */
     color: white; /* Textfärg (ändra vid behov) */
 }
-
 
