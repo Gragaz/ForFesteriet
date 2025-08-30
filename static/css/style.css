@@ -1,4 +1,4 @@
-/* Väljer hela sidan och noll-sätter den. Smooth scroll och font. */
+/* Hela sidan */
 *{
     margin: 0;
     padding:0;
@@ -6,7 +6,7 @@
     font-family: 'Poppins', sans-serif;
 }
 
-/* CSS för alla nav element. Sätter padding, displayen till flex, Lägger content över hela displayen(space-between) och sen alignar det "center" */
+/* CSS för alla nav element */
 nav{
     display: flex;
     padding: 0.5% 6%;
@@ -20,26 +20,22 @@ nav{
     width: 200px;
 }
 
-/* Text align självförklarligt */
 .nav-links{
     text-align: right;
 }
 
-/* list-style tar bort punktform, inline block sätter länkarna sidles */
 .nav-links ul li{
     list-style: none;
     display: inline-block;
     padding: 25px;
 }
 
-/* Sätter färg på länkarna i navbar och tar bort det blå standard länk grejen */
 .nav-links ul li a{
     color: whitesmoke;
     text-decoration: none;
     font-size: 22px;
 }
 
-/* Hover effect med streck under länkarna i navbar */
 .nav-links ul li::after{
     content: "";
     width: 0%;
@@ -54,13 +50,9 @@ nav{
     width: 100%;
 }
 
-
-
-
-
-/* CSS för img under navbar. vet inte vad object fit contain gör */
 .FrontPageimg img{
     width: 100%;
+    height: auto;
     display: block;
     object-fit: contain;
 }
@@ -69,13 +61,12 @@ nav{
 
 
 
-/* Section för text CSS */
+/* Text section */
 .text-section {
     padding: 220px 0;
     background-color: rgba(25, 26, 74, 1);
 }
 
-/* Div för container med rubrik och text. Centrerar och gap mellan */
 .text-container {
     display: flex;
     justify-content: center;
@@ -84,24 +75,21 @@ nav{
     margin: 0 auto;
 }
 
-/* CSS för enstaka divsen. Alltså inte båda i ett som den ovan */
 .text-item {
     flex: 1;
-    max-width: 45%; /* Adjust width of text blocks */
-    text-align: left; /* Align text to the left */
+    max-width: 45%; 
+    text-align: left; 
 }
 
-/* CSS för rubrikerna */
 .text-item h2 {
     font-size: 24px; 
     margin-bottom: 10px;
     color: whitesmoke;
 }
 
-/* CSS för divs för text box */
 .text-item p {
-    font-size: 16px; /* Paragraph size */
-    line-height: 1.6; /* Improve readability with more line spacing */
+    font-size: 16px; 
+    line-height: 1.6; 
     color: whitesmoke;
 }
 
@@ -111,79 +99,62 @@ nav{
 
 
 /* MEDIA SEKTION */
-
-/* Section CSS */
 .media-section {
     background-color: white;
     padding: 195px;
 }
 
-/* Divven i section där median kommer vara. Centrerar och lägger liten gap mellan dom */
 .media-container {
     display: flex;
     justify-content: center;
-    gap: 160px; /* Adjust the space between items */
-    max-width: 1200px; /* Optional: limit max width */
+    gap: 160px; 
+    max-width: 1200px; 
     margin: 0 auto;
 }
 
-/* CSS för div med bild och text */
 .media-item {
     flex: 1;
-    max-width: 45%; /* Adjust the width of each item */
+    max-width: 45%; 
 }
 
-/* CSS för bara bild */
 .media-item img,
 .media-item video {
     width: 100%;
     height: auto;
-    border-radius: 8px; /* Optional: add border-radius for rounded corners */
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.9); /* Stronger shadow */
+    border-radius: 8px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.9);
 }
-
-
-
-
 
 
 
 
 
 /* FOOTER */
-
-/* CSS för diven med allt i footer basically */
 .container{
-    max-width: 1800px;
+    max-width: 100%;
     margin: auto;
 }
 
-/* Lägger alla 3 rubriker sida mot sida */
 .row{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-/* Tar bort punktform */
 ul{
     list-style: none;
 }
 
-/* Lägger padding from toppen av div fottern till faktista texten */
 .footer{
     padding: 70px 0px;
     background-color: black;
 }
 
-/* Sprider ut de 3 rubrikers jämnt */
 .footer-col{
-    width: 25%;
-    padding: 0 15px;
+    width: 30%;
     color: whitesmoke;
 }
 
-/* Rubrikerna i footer, font size, färg, margin mellan rubrik och text under, text tjocklek och position relative förstår inte */
 .footer-col h4{
     font-size: 18px;
     color: whitesmoke;
@@ -192,7 +163,6 @@ ul{
     position: relative;
 }
 
-/* content skapar en linje, vet inte, vet inte, färg, tjocklek, fattar inte, bredd */
 .footer-col h4::before{
     content: "";
     position: absolute;
@@ -203,12 +173,10 @@ ul{
     width: 50px;
 }
 
-/* Storlek mellan varje rad i fotter när dom ligger listade på varandra */
 .footer-col ul li:not(:last-child){
     margin-bottom: 18px;
 }
 
-/* CSS för varje rad av text i "Bläddra". font size, färg, text-decoration tar bort undertext, tjocklek, färg och hover övergång hastighet  */
 .footer-col ul li a{
     font-size: 16px;
     color: white;
@@ -218,26 +186,22 @@ ul{
     transition: all 0.3s ease;
 }
 
-/* Vad som händer när man hover över texten, flyttas lite åt höger och ändrar färg */
 .footer-col ul li a:hover{
     color: white;
     padding-left: 8px;
 }
 
-/* Staplar varje kontakt under varandra horizontellt. CSS för hela diven under rubriken */
 .footer-col .kontakt {
     display: flex;
     flex-direction: column;
 }
 
-/* CSS för varje column i kontakt. */
 .footer-col .kontakt-item {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
 }
 
-/* helt ärligt fattar ingenting. Men CSS för varje icon grej */
 .footer-col .kontakt-item span:first-child {
     display: inline-block;
     height: 40px;
@@ -250,26 +214,158 @@ ul{
     margin-right: 10px;
 }
 
-/* CSS för texten bredvid ikonerna */
 .footer-col .kontakt-item .kontakt-text {
     font-size: 16px;
     color: white;
 }
 
-/* CSS för img under Förfesteriet i footer */
 .footer-col .footer-image {
-    max-width: 200px; /* Gör bilden max 100px bred */
-    height: auto; /* Bibehåller bildens proportioner */
-    margin-top: 10px; /* Skapa lite utrymme mellan rubrik och bild */
-    margin-bottom: 25px; /* Utrymme under bilden */
+    max-width: 200px; 
+    height: auto; 
+    margin-top: 10px; 
+    margin-bottom: 25px;
 
 }
 
-/* CSS för text längst ner på sidan av footer */ 
 .footer-bottom {
-    text-align: center; /* Centrerar texten inom .footer-bottom */
-    padding-top: 60px; /* Lägg till lite utrymme ovanför och nedanför texten */
-    color: white; /* Textfärg (ändra vid behov) */
+    text-align: center; 
+    padding-top: 60px; 
+    color: white;
 }
 
+
+.footer-bottom-row {
+    display: flex;       
+    flex-direction: row;    
+    justify-content: space-between;
+    width: 40%;
+}
+
+
+
+
+
+
+
+
+
+
+/* Responsiv Desingn */
+#menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+    z-index: 1001;
+}
+.menu-icon i.fa-times {
+    display: none;
+}
+
+/* Mobil */
+@media (max-width: 600px) {
+    nav {
+        justify-content: space-between;
+    }
+
+    .nav-links {
+        display: none;
+        position: fixed; 
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(25, 26, 74, 0.95);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    .nav-links ul {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .nav-links ul li {
+        display: block;
+    }
+
+    .nav-links ul li a {
+        font-size: 28px;
+        color: white;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    #menu-toggle:checked ~ .nav-links {
+        display: flex;
+    }
+
+    #menu-toggle:checked + .menu-icon .fa-bars {
+        display: none;
+    }
+    #menu-toggle:checked + .menu-icon .fa-times {
+        display: inline;
+    }
+
+
+    .text-section {
+        padding: 40px 15px;   
+    }
+        .text-container {
+        flex-direction: column;
+        gap: 40px;         
+        padding: 0 20px;   
+    }
+
+    .text-item {
+        max-width: 100%;   
+        text-align: center; 
+    }
+
+    .text-item h2 {
+        font-size: 20px;    
+    }
+
+    .text-item p {
+        font-size: 14px; 
+    }
+
+
+    .media-section {
+        display: none;
+    }
+
+    
+    .row {
+        display: flex;
+        flex-direction: column; 
+        align-items: flex-start; 
+    }
+
+    .footer-col:first-child {
+        width: 100%;
+        text-align: left;
+        margin-bottom: 20px;
+    }
+
+    .footer-bottom-row {
+        display: flex;
+        width: 100%;
+        justify-content: space-between; 
+    }
+
+    .footer-bottom-row .footer-col {
+        width: 48%; 
+        text-align: left;
+    }
+}
 
