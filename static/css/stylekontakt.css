@@ -53,7 +53,7 @@ nav{
 
 
 body {
-    background-color: #f4f4f4; /* Sätter hela sidans bakgrundsfärg */
+    background-color: #f4f4f4; 
 }
 
 /* Kontakt Sektion */
@@ -186,15 +186,20 @@ ul{
 }
 
 .footer-col .kontakt-item span:first-child {
-    display: inline-block;
-    height: 40px;
-    width: 40px;
+    display: flex;                  
+    align-items: center;            
+    justify-content: center;         
+
+    width: 2.5rem;                    
+    height: 2.5rem;                  
+
     background-color: blue;
-    text-align: center;
-    line-height: 40px;
-    border-radius: 70%;
+    border-radius: 50%;              
+
     color: white;
+    font-size: 1rem;                  
     margin-right: 10px;
+    flex-shrink: 0;                    
 }
 
 .footer-col .kontakt-item .kontakt-text {
@@ -249,8 +254,8 @@ ul{
     display: none;
 }
 
-/* Mobil */
-@media (max-width: 600px) {
+/* Tablet */
+@media (max-width: 1024px) {
     nav {
         justify-content: space-between;
     }
@@ -298,9 +303,10 @@ ul{
     #menu-toggle:checked + .menu-icon .fa-times {
         display: inline;
     }
+}
 
-
-    
+/* Mobil */
+@media (max-width: 600px) {
     .row {
         display: flex;
         flex-direction: column; 
@@ -308,11 +314,11 @@ ul{
     }
 
     .footer-col:first-child {
-        width: 100%;
+        width: calc(100% - 100px);
         text-align: left;
         margin-bottom: 20px;
+        padding-left: 50px;
     }
-
     .footer-bottom-row {
         display: flex;
         width: 100%;
